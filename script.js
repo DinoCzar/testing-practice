@@ -50,9 +50,29 @@ function caesarCipher(str) {
 	return result;
 }
 
+function analyzeArray(arr) {
+	const result = {};
+
+	// Calculate average
+	const sum = arr.reduce((total, num) => total + num, 0);
+	result.average = sum / arr.length;
+
+	// Find minimum value
+	result.min = Math.min(...arr);
+
+	// Find maximum value
+	result.max = Math.max(...arr);
+
+	// Get length
+	result.length = arr.length;
+
+	return result;
+}
+
 module.exports = {
 	capitalize: capitalize,
 	reverseString: reverseString,
 	calculator: calculator,
 	caesarCipher: caesarCipher,
+	analyzeArray: analyzeArray,
 };
